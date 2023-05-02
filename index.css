@@ -1,20 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
 
 body{
-    background-image: url("code.jpg");
-}
-
-h1{
-    font-family: "Dongle";
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('code.jpg');
+  background-size: 125%;
+  overflow-y: hidden;
 }
 
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* sets the height of the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center-text {
+  font-size: 300%;
+  text-align: center;
+  font-family: 'dongle';
+}
+h1 {
+  margin-bottom: -100px;
+}
+
+.pfp:hover {
+  animation: rotation 250ms infinite linear;
+}
+
+.button{
+  max-width: 10%;
+  position: absolute;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
   }
-  .center img {
-    max-width: 100%; /* ensures the image does not exceed the width of the container */
-    max-height: 100%; /* ensures the image does not exceed the height of the container */
+  to {
+    transform: rotate(359deg);
   }
+}
